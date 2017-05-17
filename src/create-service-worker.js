@@ -5,7 +5,7 @@ module.exports = function(apiFile,destinationFile){
   if(apiFile && destinationFile){
     fs.readFile(apiFile,'utf8',function(error,apiData){
       return error ? console.log(error) : fs.readFile(serviceWorkerFile,'utf8',function(error,serviceWorkerContent){
-        return error ? console.log(error) : fs.writeFile(destinationFile,serviceWorkerContent.replace('{{APIS}}',JSON.parse(JSON.stringify(apiData,undefined,2))));
+        return error ? console.log(error) : fs.writeFile(destinationFile,serviceWorkerContent.replace('{{APIS}}',JSON.parse(JSON.stringify(apiData).replace(/\\n/g,''))));
       })
     })
   }

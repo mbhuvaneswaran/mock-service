@@ -1,19 +1,6 @@
 /* Generated File */
 (function(){
-  var apis = {
-'/users':{
-  response : [
-  {name : 'bhuvanesh'},
-  {name : 'testbhuvanesh'}
-  ]
-},
-'/users/bhuvanesh':{
-  response : {
-    name : bhuvanesh
-  }
-}
-}
-;
+  var apis = {'/users':{  response : [  {name : 'bhuvanesh'},  {name : 'testbhuvanesh'}  ]},'/users/bhuvanesh':{  response : {    name : bhuvanesh  }}};
   self.addEventListener('install',function(event){
   event.waitUntil(self.skipWaiting());
   })
